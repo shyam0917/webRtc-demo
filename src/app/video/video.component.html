@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>My id - {{mypeerid}}</h1>
+    <video #myvideo width="800" controls></video>
+    <div></div>
+    <input type="text" class="form-control w-25 d-inline" [(ngModel)]="otherpeerid">
+    <button class="btn btn-primary mx-2" (click)="connect()">Connect</button>
+
+    <button class="btn btn-primary mx-2" (click)="videoconnect()">VideoChat</button>
+    <div class="mt-3"></div>
+    <input type="text" class="form-control w-25 d-inline" [(ngModel)]="messageText">  
+    <button type="button" class="btn btn-success mx-2" (click)="sendMessage()">Send</button>
+    <button type="button" class="btn btn-default mx-2" (click)="leave()">Leave</button>
+
+    <div class="jumbotron p-5">
+        <div *ngFor="let item of messageArray">
+        <span><strong>{{item.user}} : </strong> {{item.message}}</span>
+        </div>
+    </div>
+    </div>
